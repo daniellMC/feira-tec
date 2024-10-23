@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feira Tecnológica</title>
     <style>
+      
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
             background: linear-gradient(to bottom, #282a2c, #ad58eb);
-            font-size: 62.5%;
             margin: 0;
-            padding: 1rem 2rem;
+            padding: 0rem 2rem;
             min-height: 100vh; 
             overflow-y: hidden;
         }
@@ -110,6 +110,7 @@
             text-align: center;
             transition: transform 0.3s;
             margin-bottom: .2rem;
+            margin-top: .5rem;
         }
         .img-bonzi-buddy{
             cursor: pointer;
@@ -119,13 +120,36 @@
             width: 3rem;
             height: 3rem;
         }
-        hr {
-            border: .1rem solid #ddd;
+        @media (min-width:100px) {
+            html{
+                font-size: 70%;
+            }
         }
+        @media (min-width:350px) {
+            html{
+                font-size: 75%;
+            }
+        }
+        @media (min-width:500px) {
+            html{
+                font-size: 80%;
+            }
+        }
+        @media (min-width:600px) {
+            html{
+                font-size: 85%;
+            }
+        }
+        @media (min-width:770px) {
+            html{
+                font-size: 95%;
+            }
+        }
+        
     </style>
 </head>
 <body>
-    <div>
+    <main class="main">
         <div class="bonzi-buddy" id="bonzi">
             <img src="BonziBUDDY.webp" alt="BonziBUDDY" width="30" height="30" class="img-bonzi-buddy" id="staticImage">
             <img src="BonziBuddy.gif" alt="BonziBUDDY" width="30" height="30" class="img-bonzi-buddy" id="bonziGif">
@@ -156,7 +180,7 @@
             <p>Venha descobrir sobre o futuro das IAs!</p>
             <p><a href="https://www.instagram.com/2ds_sm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Siga a gente no Instagram!</a></p>
         </footer>
-    </div>
+    </main>
     <script>
         const bonzi = document.getElementById('bonzi');
         const bonziGif = document.getElementById('bonziGif');
