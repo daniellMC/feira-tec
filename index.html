@@ -1,208 +1,257 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Feira Tecnológica</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            background: linear-gradient(to bottom, #282a2c, #ad58eb);
-            margin: 0;
-            padding: 0rem 2rem;
-            min-height: 100vh; 
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f4f4f4;
+        background: linear-gradient(to bottom, #282a2c, #ad58eb);
+        margin: 0;
+        padding: 0rem 2rem;
+        min-height: 100vh;
+      }
+      @keyframes gradientAnimation {
+        0% {
+          background-position: 0% 50%;
         }
-        @keyframes gradientAnimation {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
+        50% {
+          background-position: 100% 50%;
         }
-        .header {
-            text-align: center;
-            background: linear-gradient(to right, #6a0dad, #320146);
-            background-size: 200% 200%;
-            animation: gradientAnimation 6s ease infinite;
-            padding: 2rem;
-            border-radius: .8rem;
-            color: white;
-            box-shadow: 0 .2rem 1rem rgba(0, 0, 0, 0.2);
+        100% {
+          background-position: 0% 50%;
         }
-        .header h1 {
-            margin: 0.5rem 0; 
-            font-size: 2.5rem;
-        }
-        .header h2 {
-            font-size: 1.8rem;
-            margin: 0.5rem 0; 
-        }
-        .section-title {
-            font-size: 1.5rem;
-            margin-top: 1.5rem; 
-            color: #fff;
-        }
-        .list {
-            list-style: none;
-            padding: 0;
-        }
-        .list-item {
-            margin: 0.5rem 0; 
-            font-size: 1.2rem;
-            line-height: 1.5;
-        }
-        .section {
-            background-color: #795db1;
-            border-radius: .8rem;
-            padding: 1.5rem;
-            margin: 1rem 0;
-            box-shadow: 0 .2rem 1rem rgba(0, 0, 0, 0.1);
-            font-size: 1.1rem;
-            color:#fff;
-            text-align: center;
-        }
-        .footer {
-            text-align: center;
-            font-size: 1rem;
-            margin-top: 1rem; 
-            padding: 1rem;
-            background: linear-gradient(to right, #5f1694, #320146);
-            border-radius: .8rem;
-            color: white;
-        }
-        .footer a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            position: relative;
-        }
-        .footer a::before {
-            content: "";
-            position: absolute;
-            height: 1.15rem;
-            width: 0%;
-            right: 0;
-            border-bottom: 2px solid #aa37fc;
-            transition: .3s ease-in;
-        }
-        .footer a:hover::before {
-            width: 100%;
-            left: 0;
-        }
-        .highlight-text {
-            background-color: rgba(80, 6, 133, 0.7);
-            padding: 0.2rem 0.4rem;
-            border-radius: 0.4rem;
-            font-weight: bold;
-        }
-        .title-highlight{
-            text-shadow: 0 0 .6rem #fff;
-        }
-        .bonzi-buddy{
-            width: 100%;
-            text-align: center;
-            transition: transform 0.3s;
-            margin-bottom: .2rem;
-            margin-top: .5rem;
-        }
-        .img-bonzi-buddy{
-            cursor: pointer;
-        }
-        #bonziGif{
-            display: none;
-            width: 3rem;
-            height: 3rem;
-        }
-        @media (min-width:100px) {
-            html{
-                font-size: 70%;
-            }
-        }
-        @media (min-width:350px) {
-            html{
-                font-size: 75%;
-            }
-        }
+      }
+      .header {
+        text-align: center;
+        background: linear-gradient(to right, #6a0dad, #320146);
+        background-size: 200% 200%;
+        animation: gradientAnimation 6s ease infinite;
+        padding: 2rem;
+        border-radius: 0.8rem;
+        color: white;
+        box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.2);
+      }
+      .header h1 {
+        margin: 0.5rem 0;
+        font-size: 2.5rem;
+      }
+      .header h2 {
+        font-size: 1.8rem;
+        margin: 0.5rem 0;
+      }
+      .section-title {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+        color: #fff;
+      }
+      .list {
+        list-style: none;
+        padding: 0;
+      }
+      .list-item {
+        margin: 0.5rem 0;
+        font-size: 1.2rem;
+        line-height: 1.5;
+      }
+      .section {
+        background-color: #795db1;
+        border-radius: 0.8rem;
+        padding: 1.5rem;
+        margin: 1rem 0;
+        box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.1);
+        font-size: 1.1rem;
+        color: #fff;
+        text-align: center;
+      }
+      .link-maps {
+        color: white;
+        text-shadow: 0 0 0.2rem #fff;
+      }
+      .footer {
+        text-align: center;
+        font-size: 1rem;
+        margin-top: 1rem;
+        padding: 1rem;
+        background: linear-gradient(to right, #5f1694, #320146);
+        border-radius: 0.8rem;
+        color: white;
+      }
+      .footer a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        position: relative;
+      }
 
-        @media (min-width:500px) {
-            html{
-                font-size: 80%;
-            }
+      @keyframes border {
+        0% {
+          width: 0%;
+          left: 0;
         }
-        @media (min-width:600px) {
-            html{
-                font-size: 85%;
-            }
+        50% {
+          width: 100%;
+          left: 0;
         }
-        @media (min-width:770px) {
-            html{
-                font-size: 95%;
-            }
+        100% {
+          width: 0%;
+          left: 100%;
         }
-        
+      }
+
+      .footer a::before {
+        content: "";
+        position: absolute;
+        height: 1.15rem;
+        border-bottom: 2px solid #aa37fc;
+        transition: 0.3s ease-in;
+        animation: border 4s infinite;
+      }
+      .highlight-text {
+        background-color: rgba(80, 6, 133, 0.7);
+        padding: 0.2rem 0.4rem;
+        border-radius: 0.4rem;
+        font-weight: bold;
+      }
+      .title-highlight {
+        text-shadow: 0 0 0.6rem #fff;
+      }
+      .bonzi-buddy {
+        width: 100%;
+        text-align: center;
+        transition: transform 0.3s;
+        margin-bottom: 0.2rem;
+        margin-top: 0.5rem;
+      }
+      .img-bonzi-buddy {
+        cursor: pointer;
+      }
+      #bonziGif {
+        display: none;
+        width: 3rem;
+        height: 3rem;
+      }
+      @media (min-width: 100px) {
+        html {
+          font-size: 70%;
+        }
+      }
+      @media (min-width: 350px) {
+        html {
+          font-size: 75%;
+        }
+      }
+
+      @media (min-width: 500px) {
+        html {
+          font-size: 80%;
+        }
+      }
+      @media (min-width: 600px) {
+        html {
+          font-size: 85%;
+        }
+      }
+      @media (min-width: 770px) {
+        html {
+          font-size: 95%;
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <main class="main">
-        <div class="bonzi-buddy" id="bonzi">
-            <img src="BonziBUDDY.webp" alt="BonziBUDDY" width="30" height="30" class="img-bonzi-buddy" id="staticImage">
-            <img src="BonziBuddy.gif" alt="BonziBUDDY" width="30" height="30" class="img-bonzi-buddy" id="bonziGif">
-            <audio id="bonziAudio" src="mamaco.mp3"></audio>
-        </div>
-       
-        <header class="header">
-            <h1 class="title-highlight">Feira Tecnológica</h1>
-            <h1>2º Desenvolvimento de Sistemas</h1>
-            <h2>Inteligência Artificial - Heroína ou Vilã?</h2>
-        </header>
-        <section class="section">
-            <h3 class="section-title">Na <span class="highlight-text">Feira Tecnológica</span>, você:</h3>
-            <ul class="list">
-                <li class="list-item"><i>Futuro do Trabalho</i> com IA.</li>
-                <li class="list-item">IA e sua exploração ao <i>Desconhecido</i>.</li>
-                <li class="list-item">Como a IA pode melhorar a <u>vida humana</u>.</li>
-                <li class="list-item">Impactos dos Algoritmos IA sobre <i>Privacidade, Desigualdade e Ditaduras Digitais</i>.</li>
-            </ul>
-        </section>
-        <section class="section">
-            <p><strong>Dia:</strong> 26/10 (Sábado)</p>
-            <p><strong>Horário:</strong> 09h - 13h</p>
-            <p><strong>Local:</strong> Etec São Mateus - Rua Soledade de Minas, 87</p>
-            <p><strong>Sala:</strong> Sala Maker - 2º Andar</p>
-        </section>
-        <footer class="footer">
-            <p>Venha descobrir sobre o futuro das IAs!</p>
-            <p><a href="https://www.instagram.com/2ds_sm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Siga a gente no Instagram!</a></p>
-        </footer>
+      <div class="bonzi-buddy" id="bonzi">
+        <img
+          src="BonziBUDDY.webp"
+          alt="BonziBUDDY"
+          width="30"
+          height="30"
+          class="img-bonzi-buddy"
+          id="staticImage"
+        />
+        <img
+          src="BonziBuddy.gif"
+          alt="BonziBUDDY"
+          width="30"
+          height="30"
+          class="img-bonzi-buddy"
+          id="bonziGif"
+        />
+        <audio id="bonziAudio" src="mamaco.mp3"></audio>
+      </div>
+
+      <header class="header">
+        <h1 class="title-highlight">Feira Tecnológica</h1>
+        <h1>2º Desenvolvimento de Sistemas</h1>
+        <h2>Inteligência Artificial - Heroína ou Vilã?</h2>
+      </header>
+      <section class="section">
+        <h3 class="section-title">
+          Na <span class="highlight-text">Feira Tecnológica</span>, você:
+        </h3>
+        <ul class="list">
+          <li class="list-item"><i>Futuro do Trabalho</i> com IA.</li>
+          <li class="list-item">IA e sua exploração ao <i>Desconhecido</i>.</li>
+          <li class="list-item">
+            Como a IA pode melhorar a <u>vida humana</u>.
+          </li>
+          <li class="list-item">
+            Impactos dos Algoritmos IA sobre
+            <i>Privacidade, Desigualdade e Ditaduras Digitais</i>.
+          </li>
+        </ul>
+      </section>
+      <section class="section">
+        <p><strong>Dia:</strong> 26/10 (Sábado)</p>
+        <p><strong>Horário:</strong> 09h - 13h</p>
+        <p>
+          <strong>Local:</strong>
+          <a
+            href="https://www.google.com/maps/place/ETEC+S%C3%A3o+Mateus/@-23.5788038,-46.4996333,15z/data=!4m2!3m1!1s0x0:0xa17b67dc6fa4164c?sa=X&ved=1t:2428&ictx=111"
+            class="link-maps"
+          >
+            Etec São Mateus - Rua Soledade de Minas, 87
+          </a>
+        </p>
+        <p><strong>Sala:</strong> Sala Maker - 2º Andar</p>
+      </section>
+      <footer class="footer">
+        <p>Venha descobrir sobre o futuro das IAs!</p>
+        <p>
+          <a
+            href="https://www.instagram.com/2ds_sm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          >
+            Siga a gente no Instagram!
+          </a>
+        </p>
+      </footer>
     </main>
     <script>
-        const bonzi = document.getElementById('bonzi');
-        const bonziGif = document.getElementById('bonziGif');
-        const staticImage = document.getElementById('staticImage');
-        const bonziAudio = document.getElementById('bonziAudio');
-        let isAnimating = false; 
+      const bonzi = document.getElementById("bonzi");
+      const bonziGif = document.getElementById("bonziGif");
+      const staticImage = document.getElementById("staticImage");
+      const bonziAudio = document.getElementById("bonziAudio");
+      let isAnimating = false;
 
-        bonzi.addEventListener('click', () => {
-            if (isAnimating) return; 
+      bonzi.addEventListener("click", () => {
+        if (isAnimating) return;
 
-            isAnimating = true; 
-            staticImage.style.display = 'none'; 
-            bonziGif.style.display = 'inline';
-            bonziGif.currentTime
-            bonziAudio.currentTime = 0; 
-            bonziAudio.play(); 
-            
-            setTimeout(() => {
-                bonziGif.style.display = 'none'; 
-                staticImage.style.display = 'inline';
-                isAnimating = false;
-            }, 2700); 
-        });
+        isAnimating = true;
+        staticImage.style.display = "none";
+        bonziGif.style.display = "inline";
+        bonziGif.currentTime;
+        bonziAudio.currentTime = 0;
+        bonziAudio.play();
+
+        setTimeout(() => {
+          bonziGif.style.display = "none";
+          staticImage.style.display = "inline";
+          isAnimating = false;
+        }, 2700);
+      });
     </script>
-</body>
+  </body>
 </html>
